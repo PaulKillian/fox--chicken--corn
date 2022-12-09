@@ -198,3 +198,9 @@ canvas {
 .z-front-3 {
   z-index: 3;
 }
+
+@media screen and (max-width: 914px) {
+  main {
+    margin-bottom: 7rem !important;
+  }
+}
