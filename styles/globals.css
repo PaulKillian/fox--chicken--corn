@@ -201,6 +201,6 @@ canvas {
 
 @media screen and (max-width: 913px) {
   main {
-    background-color: black;
+    margin-bottom: 7rem !important;
   }
 }
