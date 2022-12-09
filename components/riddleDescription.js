@@ -2,11 +2,21 @@ import { useEffect, useState, } from 'react'
 import styles from '../styles/Home.module.css'
 
 export const RiddleDescription = (props) => {
-    const [reload, setreload] = useState(false);
-    
-    useEffect(() => {
-        reload && window.location.reload();
-    })
+  const [reload, setreload] = useState(false);
+
+  useEffect(() => {
+    reload && window.location.reload();
+      
+    function descriptionMargin(x) {
+    const main = document.getElementByTagName('main')
+    var x = window.matchMedia("(max-width: 914px)")
+    if (x.matches) {
+        main.marginBottom: 7rem !important;
+      }
+    }
+    descriptionMargin(x)
+    x.descriptionMargin(myFunction)
+  })
 
     return (
         <main id={styles.index} className={'py-3 d-flex justify-content-center mb-3'}>
