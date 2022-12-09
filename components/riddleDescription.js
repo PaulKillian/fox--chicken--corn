@@ -8,12 +8,12 @@ export const RiddleDescription = (props) => {
     reload && window.location.reload();
       
     function descriptionMargin(x) {
-    const main = document.getElementByTagName('main')
-    var x = window.matchMedia("(max-width: 914px)")
-    if (x.matches) {
-        main.marginBottom: 7rem !important;
+      const main = document.getElementByTagName('main')
+      var x = window.matchMedia("(max-width: 914px)")
+      if (x.matches) {
+          main.style.marginBottom = 7rem !important;
+        }
       }
-    }
     descriptionMargin(x)
     x.descriptionMargin(myFunction)
   })
