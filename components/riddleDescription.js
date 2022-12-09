@@ -13,7 +13,7 @@ export const RiddleDescription = (props) => {
           main.style.marginBottom = '70rem !important';
         }
       }
-    const x = window.matchMedia("(max-width: 914px)")  
+    const x = window.matchMedia("(max-width: 1280px)")  
     descriptionMargin(x)
     x.addListener(descriptionMargin)
   })
