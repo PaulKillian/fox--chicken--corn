@@ -199,8 +199,8 @@ canvas {
   z-index: 3;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 913px) {
   main {
-    margin-bottom: 7rem !important;
+    background-color: black;
   }
 }
