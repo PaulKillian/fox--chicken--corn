@@ -6,10 +6,10 @@ export const RiddleDescription = (props) => {
 
   useEffect(() => {
     reload && window.location.reload();
-      
+    
+    const x = window.matchMedia("(max-width: 914px)")  
     function descriptionMargin(x) {
       const main = document.getElementByTagName('main')
-      var x = window.matchMedia("(max-width: 914px)")
       if (x.matches) {
           main.style.marginBottom = '70rem !important';
         }
