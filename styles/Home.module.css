@@ -1,9 +1,3 @@
 .index {
   z-index: 2;
 }
-
-@media screen and (max-width: 914px) {
-  main {
-    margin-bottom: 7rem !important;
-  }
-}
