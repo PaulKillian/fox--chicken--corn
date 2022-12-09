@@ -7,15 +7,15 @@ export const RiddleDescription = (props) => {
   useEffect(() => {
     reload && window.location.reload();
     
-    const x = window.matchMedia("(max-width: 914px)")  
     function descriptionMargin(x) {
       const main = document.querySelector('main')
       if (x.matches) {
           main.style.marginBottom = '70rem !important';
         }
       }
+    const x = window.matchMedia("(max-width: 914px)")  
     descriptionMargin(x)
-    x.descriptionMargin(descriptionMargin)
+    x.addListener(descriptionMargin)
   })
 
     return (
