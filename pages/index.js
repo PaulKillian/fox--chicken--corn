@@ -93,7 +93,7 @@ export default function Home() {
   }
 
   return (
-    <main className={'landscape main-height'}> 
+    <div className={'landscape main-height'}> 
       <canvas className={'position-absolute'} id="cvs"></canvas>
       {gameOff && <RiddleDescription />}
       <div className={'d-flex justify-content-between'}>
@@ -129,6 +129,6 @@ export default function Home() {
           isClickedFarShore={isClickedFarShore}
         />
       </div>
-    </main>
+    </div>
   )
 }
