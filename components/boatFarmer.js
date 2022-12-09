@@ -56,7 +56,7 @@ function BoatAndFarmer(props) {
         if(!props.inBoatFarShore) {
           props.setIsClickedNearShore(false)
           tl.to(".boat-container",
-            {rotationY: 180, x: 559, duration: 1});
+            {rotationY: 360, x: 0, duration: 1});
             return
         } else {
           newSceneNearShore.splice(props.inBoatFarShore.id, 1, {
@@ -68,7 +68,7 @@ function BoatAndFarmer(props) {
           props.setInBoatFarShore(null)
           props.setIsClickedNearShore(false)
           tl.to(".boat-container", 
-            {rotationY: 180, x: 559, duration: 1});
+            {rotationY: 360, x: 0, duration: 1});
         }
       }})
     }
