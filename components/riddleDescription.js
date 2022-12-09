@@ -15,7 +15,7 @@ export const RiddleDescription = (props) => {
         }
       }
     descriptionMargin(x)
-    x.descriptionMargin(myFunction)
+    x.descriptionMargin(descriptionMargin)
   })
 
     return (
