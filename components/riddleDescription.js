@@ -9,7 +9,7 @@ export const RiddleDescription = (props) => {
     })
 
     return (
-        <div id={styles.index} className={'py-3 d-flex justify-content-center mb-3'}>
+        <main id={styles.index} className={'py-3 d-flex justify-content-center mb-3'}>
             <canvas className={'position-absolute'} id="cvs"></canvas>
             <div className={'glass col-6'}>
                 <h1 className={'text-center text-white'}>THE FOX, CHICKEN, AND CORN</h1>
@@ -25,6 +25,6 @@ export const RiddleDescription = (props) => {
                 <button className={'bt-color m-3 mb-4 p-2'} 
                     onClick={() => setreload(true)}>Try Again</button>
             </div>
-        </div>
+        </main>
     )
 }
