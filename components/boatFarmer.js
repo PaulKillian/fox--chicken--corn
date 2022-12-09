@@ -18,6 +18,8 @@ function BoatAndFarmer(props) {
         ])
         props.setInBoatNearShore(null)
         props.setIsClickedFarShore(false)
+        tl.to(".boat-container", 
+          {rotationY: 180, x: 559, duration: 1});
       }
     })
   }
@@ -53,6 +55,8 @@ function BoatAndFarmer(props) {
       onComplete() {
         if(!props.inBoatFarShore) {
           props.setIsClickedNearShore(false)
+          tl.to(".boat-container",
+            {rotationY: 180, x: 559, duration: 1});
             return
         } else {
           newSceneNearShore.splice(props.inBoatFarShore.id, 1, {
@@ -63,6 +67,8 @@ function BoatAndFarmer(props) {
           props.setNearShoreScene(newSceneNearShore)
           props.setInBoatFarShore(null)
           props.setIsClickedNearShore(false)
+          tl.to(".boat-container", 
+            {rotationY: 180, x: 559, duration: 1});
         }
       }})
     }
