@@ -1,4 +1,5 @@
 import { useEffect, useState, } from 'react'
+import styles from '../styles/Home.module.css'
 
 export const RiddleDescription = (props) => {
     const [reload, setreload] = useState(false);
@@ -8,7 +9,7 @@ export const RiddleDescription = (props) => {
     })
 
     return (
-        <div id={'index'} className={'py-3 d-flex justify-content-center mb-3'}>
+        <div id={styles.index} className={'py-3 d-flex justify-content-center mb-3'}>
             <canvas className={'position-absolute'} id="cvs"></canvas>
             <div className={'glass col-6'}>
                 <h1 className={'text-center text-white'}>THE FOX, CHICKEN, AND CORN</h1>
