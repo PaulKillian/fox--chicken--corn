@@ -142,22 +142,10 @@ canvas {
 .shadow {
   filter: drop-shadow(0 0 0.1rem rgb(46, 46, 46));
 }
-.far-shore-rotate {
-  -moz-animation: spinHorizontal 1.5s forwards;
-  -o-animation: spinHorizontal 1.5s forwards;    
-  -webkit-animation: spinHorizontal 1.5s forwards;
-  animation: spinHorizontal 1.5s forwards;
-}
 
 @keyframes spinHorizontal {
   0% { transform: rotateY(0deg); }
   100% { transform: rotateY(180deg); }
-}
-.x-rotate-near-shore {
-  -moz-animation: spinHorizontalnear 1.5s forwards;
-  -o-animation: spinHorizontalnear 1.5s forwards;    
-  -webkit-animation: spinHorizontalnear 1.5s forwards;
-  animation: spinHorizontalnear 1.5s forwards;
 }
 
 @keyframes spinHorizontalnear {
@@ -172,24 +160,13 @@ canvas {
   top: 0;
   position: relative;
 }
+
 .far-position-2-items {
   bottom: 460px;
   left: 394px;
   right: 0;
   top: 0;
   position: relative;
-}
-/* .far-shore-chicken-position {
-  left: 1400px;
-  position: relative;
-} */
-
-.rotate {
-  transform: rotateY(180deg);
-  padding-left: 4rem;
-}
-.rotate2 {
-  transform: rotate(180deg);
 }
 
 .z-front {
