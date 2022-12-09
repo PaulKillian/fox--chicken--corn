@@ -19,9 +19,9 @@ a {
   box-sizing: border-box;
 }
 
-canvas {
+/* canvas {
   z-index: 1;
-}
+} */
 
 .main-height {
   height: 100vh;
