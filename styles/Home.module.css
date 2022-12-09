@@ -4,6 +4,6 @@
 
 @media screen and (max-width: 913px) {
   .index {
-    margin-bottom: 7rem;
+    margin-bottom: 7rem !important;
   }
 }
