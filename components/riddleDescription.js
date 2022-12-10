@@ -10,7 +10,6 @@ export const RiddleDescription = (props) => {
     function descriptionMargin(x) {
       const main = document.querySelector('main')
       if (x.matches) {
-          console.log(main)
           main.style.marginBottom = '7rem !important';
         }
       }
