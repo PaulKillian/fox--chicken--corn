@@ -8,9 +8,9 @@ export const RiddleDescription = (props) => {
     reload && window.location.reload();
     
     function descriptionMargin(x) {
-      console.log('huh')
       const main = document.querySelector('main')
       if (x.matches) {
+          console.log(main)
           main.style.marginBottom = '70rem !important';
         }
       }
