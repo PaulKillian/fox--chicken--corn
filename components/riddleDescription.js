@@ -11,7 +11,7 @@ export const RiddleDescription = (props) => {
       const main = document.querySelector('main')
       if (x.matches) {
           console.log(main)
-          main.style.marginBottom = '70rem !important';
+          main.style.marginBottom = '7rem !important';
         }
       }
     const x = window.matchMedia("(max-width: 1280px)")  
