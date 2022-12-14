@@ -2,7 +2,7 @@
 
 <h3>Click on an animal to get it in the boat and click the boat to get it to the opposite shore.</h3>
 
-***This is a work in process and not responsive***
+***This is a work in progress and not responsive***
 
 [Take a look!](https://gorgeous-rolypoly-35d7d5.netlify.app)
 
