@@ -13,7 +13,7 @@ How does the farmer do it?</h2>
 
 [Take a look!]([Link](https://gorgeous-rolypoly-35d7d5.netlify.app/))
 
-![Alt Text](f0xcc/public/images/Screenshot 2022-12-14 083928.png)
+![Screen shot](/public/images/screen.png)
 
 
 
