@@ -96,7 +96,7 @@ export default function Home() {
     <div className={'landscape main-height'}> 
       <canvas className={'position-absolute'} id="cvs"></canvas>
       {gameOff && <RiddleDescription />}
-      <div className={'d-flex justify-content-between'}>
+      <div id={'main'} className={'d-flex justify-content-between'}>
         <div className={'d-flex justify-content-start align-items-end'}>
           <NearShore 
             nearShoreScene={nearShoreScene}
