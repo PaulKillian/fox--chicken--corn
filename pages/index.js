@@ -1,4 +1,4 @@
-import styles from './Home.module.css'
+import styles from '../pages/styles/Home.module.css'
 import { useMemo, useCallback, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import BoatFarmer from '../components/boatFarmer'
