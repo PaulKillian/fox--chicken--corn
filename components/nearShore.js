@@ -5,12 +5,10 @@ export const NearShore = (props) => {
   const [clicked, setClicked] = useState(false)
   
   return (
-    <div className={'d-flex justify-content-start align-items-end item'}
-    // onClick={() => props.setGameOff(false)}
-    >
+    {!clicked && <div onClick={setClicked(true)}>Click one</div>}
+    <div className={'d-flex justify-content-start align-items-end item'}>
       {props.nearShoreScene.map(item => {
-        return (
-          {!clicked && <div onClick={setClicked(true)}>Click one</div>}
+        return (     
           <Image 
             id={item.id}
             key={item.id}
