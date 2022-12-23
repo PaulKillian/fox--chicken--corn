@@ -2,12 +2,11 @@ import Image from 'next/image'
 import {useState} from 'react'
 
 export const NearShore = (props) => {
-  const [clicked, setClicked] = useState(true)
-  console.log(clicked)
+  const [clicked, setClicked] = useState(false)
   
   return (
     <div>
-      {clicked && <div onClick={setClicked(false)}>Click one</div>}
+      {!clicked && <div onClick={() => {setClicked(true)}}>Click one</div>}
       <div className={'d-flex justify-content-start align-items-end item'}>
         {props.nearShoreScene.map(item => {
           return (     
