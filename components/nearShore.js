@@ -3,6 +3,7 @@ import {useState} from 'react'
 
 export const NearShore = (props) => {
   const [clicked, setClicked] = useState(true)
+  console.log(clicked)
   
   return (
     <div>
