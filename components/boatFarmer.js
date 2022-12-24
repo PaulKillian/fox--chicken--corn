@@ -7,6 +7,7 @@ import gsap from 'gsap'
 
 function BoatAndFarmer(props) {
   const sendBoatToFarShore = () => {
+    props.setGameGuide(gameGuide.farmer = true)
     props.setIsClickedNearShore(true)
     var tl = gsap.timeline();
     tl.to(".boat-container", {
