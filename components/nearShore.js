@@ -6,7 +6,7 @@ export const NearShore = (props) => {
 
   return (
     <div>
-      {props.gameGuide === false && <h1 className={styles.color}>Click one</h1>}
+      {props.gameGuide.animals === false && <h1 className={styles.color}>Click one</h1>}
       <div className={'d-flex justify-content-start align-items-end item'}>
         {props.nearShoreScene.map(item => {
           return (     
