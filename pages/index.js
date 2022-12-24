@@ -126,6 +126,7 @@ export default function Home() {
             setIsClickedNearShore={setIsClickedNearShore}
             isClickedFarShore={isClickedFarShore}
             setIsClickedFarShore={setIsClickedFarShore}
+            gameGuide={gameGuide}
           />
         </div>
         <FarShore 
