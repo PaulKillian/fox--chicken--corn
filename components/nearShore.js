@@ -3,9 +3,7 @@ import {useState} from 'react'
 
 export const NearShore = (props) => {
   const [clicked, setClicked] = useState(false)
-  
-  console.log(!clicked)
-  
+
   return (
     <div>
       {clicked === false && <div onClick={() => {setClicked(true)}}>Click one</div>}
