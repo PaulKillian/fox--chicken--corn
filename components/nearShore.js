@@ -8,7 +8,7 @@ export const NearShore = (props) => {
   
   return (
     <div>
-      {!clicked && <div onClick={() => {setClicked(true)}}>Click one</div>}
+      {clicked && <div onClick={() => {setClicked(true)}}>Click one</div>}
       <div className={'d-flex justify-content-start align-items-end item'}>
         {props.nearShoreScene.map(item => {
           return (     
