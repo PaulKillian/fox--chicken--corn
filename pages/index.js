@@ -47,6 +47,7 @@ export default function Home() {
   const snow = useCallback(() => {Particles()}, [value]);
 
   const clickedItemNearShore = (event) => {
+    setGameGuide(false)
     setIsClickedNearShore(true)
 
     const id = event.target.id
