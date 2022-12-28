@@ -9,7 +9,7 @@ function BoatAndFarmer(props) {
   const sendBoatToFarShore = () => {
     props.setGameGuide({
       ...props.gameGuide,
-      props.gameGuide.farmer: true
+      farmer: true
     })
     
     props.setIsClickedNearShore(true)
