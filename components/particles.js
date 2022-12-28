@@ -16,8 +16,8 @@ window.requestAnimFrame = (function(){
     height = canvas.height = document.body.offsetHeight,
     width = canvas.width = document.body.offsetWidth,
     collection = [],
-    num_drops = 2024, // number of drops
-    gravity = .5, // gravity multiplier 
+    num_drops = 4024, // number of drops
+    gravity = .1, // gravity multiplier 
     windforce = 0, // yea i'd just leave this
     windmultiplier = 0.007, // this freaks out on large numbers
     maxspeed = 3, // this is so you never run too fast (it is a multiplier not raw)
