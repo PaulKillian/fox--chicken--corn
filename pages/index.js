@@ -56,7 +56,7 @@ export default function Home() {
       animals: true,
       farmer: false
     })
-    : return
+    : null
     
     setIsClickedNearShore(true)
 
