@@ -39,7 +39,7 @@ export default function Home() {
   const [gameOff, setGameOff] = useState(true)
   const [gameGuide, setGameGuide] = useState({
     animals: false,
-    farmer: false,
+    farmer: true,
   })
 
   useEffect(() => {
@@ -51,6 +51,7 @@ export default function Home() {
 
   const clickedItemNearShore = (event) => {
     setGameGuide(gameGuide.animals = true)
+    setGameGuide(gameGuide.farmer = false)
     setIsClickedNearShore(true)
 
     const id = event.target.id
