@@ -51,7 +51,6 @@ export default function Home() {
   const snow = useCallback(() => {Particles()}, [value]);
 
   const clickedItemNearShore = (event, idAnimate) => {
-    gsap.to(`#${idAnimate}`, {rotation: 27, x: 100, duration: 1});
     
     gameGuide.farmer === true
     ? setGameGuide({
@@ -78,6 +77,7 @@ export default function Home() {
     }
 
     const putInBoatNearShore = () => {
+      gsap.to(`#${idAnimate}`, {rotation: 27, x: 100, duration: 1});
       newSceneNearShore.splice(id, 1, {
         img: placeholder,
         alt: 'placeholder'
@@ -86,7 +86,6 @@ export default function Home() {
     }
 
     if (id === 'co' || id === 'fo') {
-      console.log(nearShoreScene[0].alt)
       if(farShoreScene.length > 0 ) {
         putInBoatNearShore() 
       } else {
