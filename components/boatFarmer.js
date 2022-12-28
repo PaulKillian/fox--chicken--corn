@@ -85,6 +85,7 @@ function BoatAndFarmer(props) {
 
   return (
       <div className={'boat-container'} 
+      {props.gameGuide.farmer === false && <h1 className={styles.color}>Click The Farmer</h1>}
         onClick={sendBoat}>
           <div id={'boat'} className={'position-relative d-flex flex-column justify-content-end float'}>
               <div className={'position-relative farmer-position'}>
