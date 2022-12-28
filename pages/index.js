@@ -18,17 +18,17 @@ export default function Home() {
     {
       img: chicken,
       alt: 'chicken',
-      id: '0',
+      id: 'chik',
     },
     {
       img: corn,
       alt: 'corn',
-      id: '1',
+      id: 'co',
     },
     {
       img: fox,
       alt: 'fox',
-      id: '2',
+      id: 'fo',
     }
   ]);
 
@@ -51,7 +51,6 @@ export default function Home() {
   const snow = useCallback(() => {Particles()}, [value]);
 
   const clickedItemNearShore = (event, idAnimate) => {
-    console.log(idAnimate)
     gsap.to(`#${idAnimate}`, {rotation: 27, x: 100, duration: 1});
     
     gameGuide.farmer === true
