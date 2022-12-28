@@ -85,14 +85,14 @@ export default function Home() {
       setInBoatNearShore(nearShoreScene[id])
     }
 
-    if (id === '1' || id === '2') {
+    if (id === 'co' || id === 'fo') {
       console.log(nearShoreScene[0].alt)
       if(farShoreScene.length > 0 ) {
         putInBoatNearShore() 
       } else {
         death()
       }       
-    } else if (id === '0') {
+    } else if (id === 'chik') {
       putInBoatNearShore()
     } 
     setNearShoreScene(newSceneNearShore)
