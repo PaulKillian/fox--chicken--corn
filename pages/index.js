@@ -51,6 +51,7 @@ export default function Home() {
   const snow = useCallback(() => {Particles()}, [value]);
 
   const clickedItemNearShore = (event, idAnimate) => {
+    consoel.log(idAnimate)
     gsap.to(`#${idAnimate}`, {rotation: 27, x: 100, duration: 1});
     
     gameGuide.farmer === true
