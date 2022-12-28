@@ -49,7 +49,9 @@ export default function Home() {
   const value = 0;
   const snow = useCallback(() => {Particles()}, [value]);
 
-  const clickedItemNearShore = (event) => {
+  const clickedItemNearShore = (event, id) => {
+    gsap.to(id, {rotation: 27, x: 100, duration: 1});
+    
     gameGuide.farmer === true
     ? setGameGuide({
       ...gameGuide,
