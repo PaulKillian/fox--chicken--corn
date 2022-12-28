@@ -52,7 +52,7 @@ export default function Home() {
   const clickedItemNearShore = (event) => {
     setGameGuide({
       ...gameGuide,
-      animal: true,
+      animals: true,
       farmer: false
     })
     
