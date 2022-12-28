@@ -59,7 +59,7 @@ export default function Home() {
     : setGameGuide({
       ...gameGuide,
       animals: true,
-      farmer: null
+      farmer: 'no more'
     })
     
     setIsClickedNearShore(true)
