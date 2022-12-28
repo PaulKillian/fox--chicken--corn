@@ -3,7 +3,7 @@ import {useState} from 'react'
 import styles from '../styles/Home.module.css'
 
 export const NearShore = (props) => {
-  console.log(props.animals)
+  console.log(props.gameGuide.animals)
   return (
     <div>
       {props.gameGuide.animals === false && <h1 className={styles.color}>Click one</h1>}
