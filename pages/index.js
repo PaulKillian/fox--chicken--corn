@@ -50,7 +50,7 @@ export default function Home() {
   const snow = useCallback(() => {Particles()}, [value]);
 
   const clickedItemNearShore = (event) => {
-    gameGuide.farmer === false 
+    gameGuide.farmer === true
     ? setGameGuide({
       ...gameGuide,
       animals: true,
