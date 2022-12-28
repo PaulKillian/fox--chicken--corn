@@ -31,6 +31,10 @@ function BoatAndFarmer(props) {
   }
 
   const sendBoatToNearShore = () => {
+    props.setGameGuide({
+      ...props.gameGuide,
+      farmer:'no more'
+    })
     const newSceneNearShore = [...props.nearShoreScene]
     const newSceneFarShore = [...props.farShoreScene]
     props.setIsClickedFarShore(false)
