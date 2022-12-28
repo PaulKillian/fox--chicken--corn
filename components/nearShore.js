@@ -19,7 +19,7 @@ export const NearShore = (props) => {
               height={150}
               onClick={event => props.isClickedNearShore
                 ? event.preventDefault()
-                : props.clickedItemNearShore(event)
+                : props.clickedItemNearShore(event, item.id)
               }
               className={item.alt === 'placeholder'
                 ? 'hidden'
