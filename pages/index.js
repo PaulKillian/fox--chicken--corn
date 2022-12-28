@@ -52,7 +52,7 @@ export default function Home() {
 
   const clickedItemNearShore = (event, idAnimate) => {
     const idA = `#${idAnimate}`
-    gsap.to(idA, {rotation: 27, x: 100, duration: 1});
+    gsap.to('#hi', {rotation: 27, x: 100, duration: 1});
     
     gameGuide.farmer === true
     ? setGameGuide({
