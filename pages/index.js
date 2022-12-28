@@ -3,7 +3,8 @@ import { useMemo, useCallback, useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import BoatFarmer from '../components/boatFarmer'
 import { RiddleDescription } from '../components/riddleDescription'
-import Particles from '../components/particles'
+// import Particles from '../components/particles'
+import particleParams from '../components/particles.json'
 import chicken from '../public/images/chicken.png'
 import corn from '../public/images/corn.png'
 import fox from '../public/images/fox.png'
@@ -41,13 +42,17 @@ export default function Home() {
     animals: false,
     farmer: true,
   })
-
-  useEffect(() => {
-    snow()
-  }, []);
   
-  const value = 0;
-  const snow = useCallback(() => {Particles()}, [value]);
+  particlesJS.load('cvs', `${particlesParam}`, function() {
+    console.log('callback - cvs config loaded');
+  });
+
+//   useEffect(() => {
+//     snow()
+//   }, []);
+  
+//   const value = 0;
+//   const snow = useCallback(() => {Particles()}, [value]);
 
   const clickedItemNearShore = (event) => {
     gameGuide.farmer === true
