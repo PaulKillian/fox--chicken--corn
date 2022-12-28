@@ -20,7 +20,7 @@ window.requestAnimFrame = (function(){
     gravity = 1, // gravity multiplier 
     windforce = 0, // yea i'd just leave this
     windmultiplier = 0.007, // this freaks out on large numbers
-    maxspeed = 5, // this is so you never run too fast (it is a multiplier not raw)
+    maxspeed = 3, // this is so you never run too fast (it is a multiplier not raw)
     gutter = 0.001; // the percentage distance to travel off screen before wrapping
   
   function Drop() {
@@ -106,7 +106,7 @@ window.requestAnimFrame = (function(){
       var drop = new Drop(); // todo: make constructor do this shit
       drop.color = "white";
       drop.distance = Math.random() * 10 | 0;
-      drop.speed = Math.random() * (drop.distance / 5) + gravity;
+      drop.speed = Math.random() * (drop.distance / 3) + gravity;
       drop.vx = 0;
       drop.vy = Math.random() * drop.speed + (drop.speed / 2);
       drop.radius = (drop.distance + 1) / 16 * 3;
