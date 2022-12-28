@@ -11,7 +11,7 @@ export const NearShore = (props) => {
         {props.nearShoreScene.map(item => {
           return (     
             <Image 
-              id={item.id}
+              id={'hi'}
               key={item.id}
               src={item.img} 
               alt={item.alt} 
