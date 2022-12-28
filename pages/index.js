@@ -11,6 +11,7 @@ import poof from '../public/images/poof.png'
 import placeholder from '../public/images/placeholder.png'
 import { NearShore } from '../components/nearShore'
 import { FarShore } from '../components/farShore'
+import gsap from 'gsap'
 
 export default function Home() {
   const [nearShoreScene, setNearShoreScene] = useState([
