@@ -77,16 +77,12 @@ export default function Home() {
     }
 
     const putInBoatNearShore = () => {
-//       gsap.to(`#${idAnimate}`, {rotation: 27, x: 100, duration: 1,
-//         onComplete() {
-//           newSceneNearShore.splice(id, 1, {
-//           img: placeholder,
-//           alt: 'placeholder'
-//         })
-//         setInBoatNearShore(nearShoreScene[id])
-//         }                       
-//       })
-//     }
+      newSceneNearShore.splice(id, 1, {
+        img: placeholder,
+        alt: 'placeholder'
+      })
+      setInBoatNearShore(nearShoreScene[id])
+    }
 
     if (id === 'co' || id === 'fo') {
       if(farShoreScene.length > 0 ) {
