@@ -11,37 +11,31 @@ import poof from '../public/images/poof.png'
 import placeholder from '../public/images/placeholder.png'
 import { NearShore } from '../components/nearShore'
 import { FarShore } from '../components/farShore'
-import gsap from 'gsap'
-
 export default function Home() {
   const [nearShoreScene, setNearShoreScene] = useState([
     {
       img: chicken,
       alt: 'chicken',
-      id: 'chik',
+      id: '0',
     },
     {
       img: corn,
       alt: 'corn',
-      id: 'co',
+      id: '1',
     },
     {
       img: fox,
       alt: 'fox',
-      id: 'fo',
+      id: '2',
     }
   ]);
-
   const [inBoatNearShore, setInBoatNearShore] = useState(null)
   const [inBoatFarShore, setInBoatFarShore] = useState(null)
   const [farShoreScene, setFarShoreScene] = useState([])
   const [isClickedNearShore, setIsClickedNearShore] = useState(false)
   const [isClickedFarShore, setIsClickedFarShore] = useState(false)
   const [gameOff, setGameOff] = useState(true)
-  const [gameGuide, setGameGuide] = useState({
-    animals: false,
-    farmer: true,
-  })
+  const [gameGuide, setGameGuide] = useState(false)
 
   useEffect(() => {
     snow()
@@ -49,23 +43,8 @@ export default function Home() {
   
   const value = 0;
   const snow = useCallback(() => {Particles()}, [value]);
-
-  const clickedItemNearShore = (event, idAnimate) => {
-    
-    gameGuide.farmer === true
-    ? setGameGuide({
-      ...gameGuide,
-      animals: true,
-      farmer: false
-    })
-    : setGameGuide({
-      ...gameGuide,
-      animals: true,
-      farmer: 'no more'
-    })
-    
+  const clickedItemNearShore = (event) => {
     setIsClickedNearShore(true)
-
     const id = event.target.id
     const newSceneNearShore = [...nearShoreScene]
     
@@ -75,7 +54,6 @@ export default function Home() {
         alt: 'death cloud'
       })
     }
-
     const putInBoatNearShore = () => {
       newSceneNearShore.splice(id, 1, {
         img: placeholder,
@@ -83,25 +61,23 @@ export default function Home() {
       })
       setInBoatNearShore(nearShoreScene[id])
     }
-
-    if (id === 'co' || id === 'fo') {
+    if (id === '1' || id === '2') {
+      console.log(nearShoreScene[0].alt)
       if(farShoreScene.length > 0 ) {
         putInBoatNearShore() 
       } else {
         death()
       }       
-    } else if (id === 'chik') {
+    } else if (id === '0') {
       putInBoatNearShore()
     } 
     setNearShoreScene(newSceneNearShore)
   }
-
   const clickedItemFarShore = (event) => {
     setIsClickedNearShore(true)
     
     const id = event.target.id
     const newSceneFarShore = [...farShoreScene]
-
     const inBoatFarShore = () => {
       newSceneFarShore.splice(id, 1)
       setInBoatFarShore(farShoreScene[id])
@@ -113,7 +89,10 @@ export default function Home() {
   return (
     <div className={'landscape main-height'}> 
       <canvas className={'position-absolute'} id="cvs"></canvas>
-      {gameOff && <RiddleDescription />}
+      {gameOff && 
+      <RiddleDescription 
+        farShoreScene={farShoreScene}
+      />}
       <div id={styles.main} className={'d-flex justify-content-between'}>
         <div className={'d-flex justify-content-start align-items-end'}>
           <NearShore 
@@ -138,17 +117,15 @@ export default function Home() {
             setIsClickedNearShore={setIsClickedNearShore}
             isClickedFarShore={isClickedFarShore}
             setIsClickedFarShore={setIsClickedFarShore}
-            gameGuide={gameGuide}
-            setGameGuide={setGameGuide}
           />
         </div>
-        <FarShore 
-          farShoreScene={farShoreScene}
-          inBoatNearShore={inBoatNearShore}
-          setInBoatNearShore={setInBoatNearShore}
-          clickedItemFarShore={clickedItemFarShore}
-          isClickedFarShore={isClickedFarShore}
-        />
+          <FarShore 
+            farShoreScene={farShoreScene}
+            inBoatNearShore={inBoatNearShore}
+            setInBoatNearShore={setInBoatNearShore}
+            clickedItemFarShore={clickedItemFarShore}
+            isClickedFarShore={isClickedFarShore}
+          />
       </div>
     </div>
   )

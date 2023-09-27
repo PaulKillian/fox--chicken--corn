@@ -7,13 +7,7 @@ import gsap from 'gsap'
 
 function BoatAndFarmer(props) {
   const sendBoatToFarShore = () => {
-    props.setGameGuide({
-      ...props.gameGuide,
-      farmer: null
-    })
-    
     props.setIsClickedNearShore(true)
-    
     var tl = gsap.timeline();
     tl.to(".boat-container", {
       duration: 2, x: 559,
@@ -24,17 +18,11 @@ function BoatAndFarmer(props) {
         ])
         props.setInBoatNearShore(null)
         props.setIsClickedFarShore(false)
-        tl.to(".boat-container", 
-          {rotationY: 180, x: 559, duration: 1});
       }
     })
   }
 
   const sendBoatToNearShore = () => {
-    props.setGameGuide({
-      ...props.gameGuide,
-      farmer:'no more'
-    })
     const newSceneNearShore = [...props.nearShoreScene]
     const newSceneFarShore = [...props.farShoreScene]
     props.setIsClickedFarShore(false)
@@ -52,7 +40,7 @@ function BoatAndFarmer(props) {
       props.setFarShoreScene(newSceneFarShore)
       props.setIsClickedFarShore(false)
     }
-    
+
     if(props.farShoreScene.length > 1 && props.inBoatFarShore === null
       && props.nearShoreScene[0].alt !== 'chicken') {
       death()
@@ -65,8 +53,6 @@ function BoatAndFarmer(props) {
       onComplete() {
         if(!props.inBoatFarShore) {
           props.setIsClickedNearShore(false)
-          tl.to(".boat-container",
-            {rotationY: 360, x: 0, duration: 1});
             return
         } else {
           newSceneNearShore.splice(props.inBoatFarShore.id, 1, {
@@ -77,8 +63,6 @@ function BoatAndFarmer(props) {
           props.setNearShoreScene(newSceneNearShore)
           props.setInBoatFarShore(null)
           props.setIsClickedNearShore(false)
-          tl.to(".boat-container", 
-            {rotationY: 360, x: 0, duration: 1});
         }
       }})
     }
@@ -93,13 +77,10 @@ function BoatAndFarmer(props) {
   }
 
   return (
-      <div className={'boat-container'} onClick={sendBoat}>
-        {props.gameGuide.farmer === false 
-          ? <h1 className={styles.color}>Click The Farmer</h1>
-          : null
-        }
-          <div id={'boat'} className={'position-relative d-flex flex-column justify-content-end float'}>
-              <div className={'position-relative farmer-position'}>
+      <div className={'boat-container position-absolute bottom-0 z'} 
+        onClick={sendBoat}>
+          <div id={'boat'} className={'d-flex flex-column justify-content-end float'}>
+              <div className={'farmer-position'}>
                   <Image
                   src={farmer} 
                   alt="The farmer" 
